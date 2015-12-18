@@ -1,0 +1,16 @@
+{  
+  "name": "HelloWorld",  
+  "version": "0.1.0",  
+    "author" : "Shlomy Shivek",  
+    "private" : true,  
+  "devDependencies": {  
+          "grunt" :                       "~0.4.*",  
+          "grunt-contrib-concat": 		  "*",
+		  "grunt-ng-annotate":			  "*",
+		  "grunt-contrib-cssmin":         "*",  
+          "grunt-contrib-qunit":          "*",  
+          "grunt-contrib-jshint":         "*",  
+          "grunt-contrib-uglify":         "*",  
+          "matchdep":                     "*"  
+  }  
+}
