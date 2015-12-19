@@ -1,5 +1,5 @@
 angular.module('stam',[])
 	.service('service2',function(){
-		return function(){ return 5;}
+		return function(){ return 'hello from external module';}
 	}); 
 	

@@ -10,7 +10,11 @@
 		  "grunt-contrib-cssmin":         "*",  
           "grunt-contrib-qunit":          "*",  
           "grunt-contrib-jshint":         "*",  
-          "grunt-contrib-uglify":         "*",  
-          "matchdep":                     "*"  
+          "grunt-contrib-uglify":         "*",
+          "grunt-include-source":         "*",
+          "grunt-targethtml":             "*",
+          "grunt-contrib-watch":          "*",
+          "grunt-contrib-clean":          "*",
+          "matchdep":                     "*"
   }  
 }

@@ -10,10 +10,17 @@
 <body>
 
     <h1 ng-controller="HelloWorldCtrl">{{helloMsg}}</h1>
+
 	<script src="js/external/angular.min.js"></script>
+
+	<!--(if target release)>
 	<script src="app.min.js"></script>
-	<!--
-	<script src="HelloWorld.js"></script>
-	<script src="ExternalModule.js"></script> -->
+	<!--<!(endif)-->
+
+	<!--(if target debug)><!-->
+	<!-- include: "type": "js", "files": "./**/*.js" -->
+	<!--<!(endif)-->
+
+
 </body>
 </html>
