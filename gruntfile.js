@@ -17,28 +17,29 @@ module.exports = function (grunt) {
                 }  
             }  
         },
-		
-		ngAnnotate: {
-			options: {
-				singleQuotes: true
-			},
-			app: {
-                files: {
-                    './js/ExternalModule.min.js': ['./js/ExternalModule.js'],
-                    './js/HelloWorld.min.js': ['./js/HelloWorld.js']
-                }
-			}
-		},
-		concat: {
+
+        ngAnnotate: {
+            dist:{
+                files:[{
+                    expand: true,
+                    src:['./js/**/*.js'],
+                    ext:'.min.js-annotated',
+                    extDot:'last'
+                }]
+            }
+
+        },
+
+        concat: {
 			js: { //target
-				src: ['./js/*.min.js'],
-				dest: './js/app.min.js'
+				src: ['./js/*.min.js-annotated'],
+				dest: './app.min.js'
 			}
 		},
         uglify: {
 			js: { //target
-				src: ['./js/app.min.js'],
-				dest: './js/app.min.js'
+				src: ['./app.min.js'],
+				dest: './app.min.js'
 			}
 		}
     });  
