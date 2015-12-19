@@ -9,8 +9,7 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
 
-        clean: ['**/*.js-annotated'],
-
+        //watch for files changes
         watch: {
             debug:{
                 files: ['**/*.js','index.tpl.html'],
@@ -26,6 +25,10 @@ module.exports = function (grunt) {
 
         },
 
+        //clean annotated temporary files that created in release mode
+        clean: ['**/*.js-annotated'],
+
+        //change the index html file that was created from the template according to the build mode
         targethtml: {
             debug: {
                 files: {
@@ -39,6 +42,7 @@ module.exports = function (grunt) {
             },
         },
 
+        //include all javascript files from sub directories to the html file automatically
         includeSource: {
             options: {
                 basePath: './js',
@@ -51,6 +55,7 @@ module.exports = function (grunt) {
             }
         },
 
+        //create a css min file (TBD)
         cssmin: {  
             sitecss: {  
                 options: {  
@@ -64,6 +69,7 @@ module.exports = function (grunt) {
             }  
         },
 
+        //annotate teh angular functions parameters - prepare them for minification
         ngAnnotate: {
             dist:{
                 files:[{
@@ -82,6 +88,7 @@ module.exports = function (grunt) {
 				dest: './app.min.js'
 			}
 		},
+
         uglify: {
 			js: { //target
 				src: ['./app.min.js'],
