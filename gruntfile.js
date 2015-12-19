@@ -23,10 +23,10 @@ module.exports = function (grunt) {
 				singleQuotes: true
 			},
 			app: {
-				files: {
-					'./js/ExternalModule.min.js': ['./js/ExternalModule.js'],
-					'./js/HelloWorld.min.js': ['./js/HelloWorld.js']
-				}
+                files: {
+                    './js/ExternalModule.min.js': ['./js/ExternalModule.js'],
+                    './js/HelloWorld.min.js': ['./js/HelloWorld.js']
+                }
 			}
 		},
 		concat: {
